@@ -15,7 +15,9 @@ Research project that maps CVE descriptions to MITRE ATT&CK techniques using a B
 ## Repository Structure
 ```CVE2ATTACK/
 ├─ data/ # lightweight CSVs for quick tests (full dataset on Google Drive)
-│ ├─ sample_train.csv
+│ ├─ cve_clean.csv
+│ ├─ train.csv
+│ ├─ val.csv
 │ └─ test.csv
 │
 ├─ results/ # evaluation outputs
