@@ -1,0 +1,24 @@
+# python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# data / models / outputs
+models/
+results/*.npy
+results/*.safetensors
+results/*.bin
+out/
+smoke_out/
+final_model*/
+best_model*/
+*.log
+
+# jupyter
+.ipynb_checkpoints/
+
+# os
+.DS_Store
+Thumbs.db
