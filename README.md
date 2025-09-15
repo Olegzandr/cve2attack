@@ -63,7 +63,7 @@ python scripts/infer_save.py --model_dir models/ep2_bs64 --test_file data/test.c
 python scripts/eval.py --results_dir results --threshold 0.15 --sweep
 
 # 6) visualize confusion map
-python scripts/confusion.py --results_dir results --threshold 0.15
+python scripts/confusion.py --results_dir results --threshold 0.15```
 
 ---
 
