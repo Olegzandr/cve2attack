@@ -13,36 +13,38 @@ Research project that maps CVE descriptions to MITRE ATT&CK techniques using a B
 ---
 
 ## Repository Structure
-CVE2ATTACK/
-
-├─ data/ # datasets
-
-│ ├─ cve_clean.csv # cleaned CVE descriptions
-│ ├─ train.csv # training split
-│ ├─ val.csv # validation split
-│ └─ test.csv # test split
-│
-├─ models/ # saved fine-tuned model checkpoints
-│ ├─ ep2_bs64/ # model after 2 epochs, batch size 64
-│ ├─ ep3_bs32/ # model after 3 epochs, batch size 32
-│ └─ ep4_bs64/ # model after 4 epochs, batch size 64
+```CVE2ATTACK/
+├─ data/ # lightweight CSVs for quick tests (full dataset on Google Drive)
+│ ├─ sample_train.csv
+│ └─ test.csv
 │
 ├─ results/ # evaluation outputs
-│ ├─ metrics/ # metrics JSON/CSV for each run
+│ ├─ metrics/ # JSON with grouped metrics per experiment
+│ │ ├─ test_metrics_grouped_ep2_bs64.json
+│ │ ├─ test_metrics_grouped_ep3_bs32.json
+│ │ └─ test_metrics_grouped_ep4_bs64.json
 │ ├─ plots/ # confusion maps and visualizations
+│ │ ├─ ep2_bs64_confusion_th015.png
+│ │ ├─ ep3_bs32_confusion_th015.png
+│ │ └─ ep4_bs64_fast_confusion_th015.png
 │ ├─ y_prob.npy # cached model probabilities (N × L)
 │ └─ y_true.npy # ground-truth labels (N × L)
 │
 ├─ scripts/ # main project scripts
 │ ├─ split_dataset.py # prepare train/val/test splits
-│ ├─ train.py # fine-tune BERT model
+│ ├─ train.py # fine-tune BERT
 │ ├─ infer_save.py # run inference and save predictions
 │ ├─ eval.py # compute metrics (+ threshold sweep)
 │ └─ confusion.py # generate confusion heatmaps
 │
-├─ requirements.txt # Python dependencies
-└─ README_en.md
+├─ .gitignore
+├─ requirements.txt
+└─ README.md
+```
+## External Resources
 
+- 📂 **Full dataset (CVE corpus)** → [Google Drive link](https://drive.google.com/drive/folders/17yBEvfqLKrkmIus4hkptbWa9_paflK_x?usp=sharing)  
+- 📂 **Fine-tuned model checkpoints** → [Google Drive link](https://drive.google.com/drive/folders/17yBEvfqLKrkmIus4hkptbWa9_paflK_x?usp=sharing) 
 ---
 
 ## Quick Start
