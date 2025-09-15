@@ -14,7 +14,9 @@ Research project that maps CVE descriptions to MITRE ATT&CK techniques using a B
 
 ## Repository Structure
 CVE2ATTACK/
+
 ├─ data/ # datasets
+
 │ ├─ cve_clean.csv # cleaned CVE descriptions
 │ ├─ train.csv # training split
 │ ├─ val.csv # validation split
